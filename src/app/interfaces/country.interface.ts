@@ -1,4 +1,4 @@
-export interface CountriesInterface {
+export interface CountryInterface {
   capital: string;
   continent: {name: string, __typename: string};
   currency: string;

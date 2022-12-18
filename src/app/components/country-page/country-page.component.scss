@@ -1,8 +1,70 @@
-.navigation__icon {
-  cursor: pointer;
-  align-items: center;
-  margin-left: 22px;
-  width: 16px;
-  height: 16px;
-  background: url("./../../../assets/arrow.svg");
+.container {
+  padding-top: 48px;
+  padding-left: 64px;
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+
+    .navigation__icon {
+      cursor: pointer;
+      align-items: center;
+      width: 9px;
+      height: 9px;
+      background: url("./../../../assets/arrow.svg") 0 0/ cover no-repeat;
+      transform: scaleX(-1);
+    }
+
+    .navigation__text {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #2962FF;
+      margin-left: 7.5px;
+    }
+  }
+
+  .card__country_header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 53px;
+  }
+
+  .card__country_body {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    .description {
+      width: 453px;
+      display: flex;
+      margin-bottom: 40px;
+      .country__description {
+        width: 50%;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.87);
+      }
+      .country__description_value {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #2962FF;
+      }
+    }
+
+  }
+
 }
+

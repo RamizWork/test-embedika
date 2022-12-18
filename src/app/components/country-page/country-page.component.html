@@ -2,12 +2,34 @@
   <div class="container">
     <div class="navigation">
       <div class="navigation__icon" routerLink="/"></div>
-      <div class="navigation__text"></div>
+      <div class="navigation__text">Вернуться</div>
     </div>
-    <div class="card__country_header">{{country.capital}}</div>
+    <div class="card__country_header">{{country.name}}</div>
     <div class="card__country_body">
-      <span>continent</span>
-      <div>{{country.continent}}</div>
+      <div class="description">
+        <span class="country__description">Capital</span>
+        <div class="country__description_value">{{country.capital}}</div>
+      </div>
+
+      <div class="description">
+        <span class="country__description">Continent</span>
+        <div class="country__description_value">{{country.continent.name}}</div>
+      </div>
+
+      <div class="description">
+        <span class="country__description">Currency</span>
+        <div class="country__description_value"> {{country.currency}}</div>
+      </div>
+
+      <div class="description">
+        <span class="country__description">Emoji</span>
+        <div class="country__description_value">{{country.emoji}}</div>
+      </div>
+
+      <div class="description">
+        <span class="country__description">Phone</span>
+        <div class="country__description_value">{{country.phone}}</div>
+      </div>
     </div>
   </div>
 </ng-container>
