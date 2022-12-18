@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="country__info">
+    <div class="header">List of country</div>
+    <ng-container *ngIf="countryData$ | async as countryDataList">
+      <app-country-preview *ngFor="let country of countryDataList" [country]="country"></app-country-preview>
+    </ng-container>
+  </div>
+</div>

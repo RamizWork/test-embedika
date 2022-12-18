@@ -1,0 +1,13 @@
+<ng-container *ngIf="country$ | async as country">
+  <div class="container">
+    <div class="navigation">
+      <div class="navigation__icon" routerLink="/"></div>
+      <div class="navigation__text"></div>
+    </div>
+    <div class="card__country_header">{{country.capital}}</div>
+    <div class="card__country_body">
+      <span>continent</span>
+      <div>{{country.continent}}</div>
+    </div>
+  </div>
+</ng-container>

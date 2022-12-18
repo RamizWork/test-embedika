@@ -1,0 +1,60 @@
+.container {
+  max-width: 1527px;
+  margin-left: 64px;
+
+  hr {
+    margin-bottom: 40px;
+    margin-left: 0;
+    max-width: 1399px;
+  }
+
+  .country__name {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.87);
+
+    .arrow {
+      cursor: pointer;
+      align-items: center;
+      margin-left: 22px;
+      width: 16px;
+      height: 16px;
+      background: url("./../../../assets/arrow.svg");
+    }
+  }
+
+  .country__info {
+    display: flex;
+    margin: 29px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    .country__info_continent {
+      display: flex;
+      width: 455px;
+      font-family: 'Roboto';
+      color: rgba(0, 0, 0, 0.87);
+
+      div {
+        margin-left: 107px;
+        color: #2962FF;
+      }
+    }
+
+    .country__info_phone {
+      display: flex;
+
+      div {
+        margin-left: 107px;
+        color: #2962FF;
+      }
+    }
+  }
+}
