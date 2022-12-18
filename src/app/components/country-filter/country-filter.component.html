@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="title">Фильтры</div>
+  <form class="form_filter" [formGroup]="form">
+    <div>
+      <input class="filter__input" type="text" placeholder="название" formControlName="name">
+    </div>
+    <div class="radio__button_wrapper">
+      <div class="title__radio_button">Тип</div>
+      <div class="radio__button">
+        <input name="searchField" type="radio" id="phone" formControlName="searchField" [value]="countryKeys.phone">
+        <label for="phone">Phone</label>
+      </div>
+      <div class="radio__button">
+        <input name="searchField" type="radio" id="capital" formControlName="searchField" [value]="countryKeys.capital">
+        <label for="capital">Capital</label>
+      </div>
+      <div class="radio__button">
+        <input name="searchField" type="radio" id="name" formControlName="searchField" [value]="countryKeys.name">
+        <label for="name">Country</label>
+      </div>
+    </div>
+  </form>
+</div>
+<ng-container *ngIf="watcherForm$ | async"></ng-container>

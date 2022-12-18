@@ -12,6 +12,10 @@ import {DataCountriesInterface} from "../../interfaces/dataCountries.interface";
 export class CountryListComponent implements OnInit {
   loadCountriesFromApi$: Observable<CountryInterface[]> | undefined;
   countriesData$: Observable<DataCountriesInterface> | undefined;
+  countryFilterData = {
+    key: undefined,
+    searchValue: ''
+  }
 
   constructor(private countryService: CountriesService) { }
 
@@ -26,5 +30,10 @@ export class CountryListComponent implements OnInit {
 
   nextPage() {
     this.countryService.nextPage();
+  }
+
+  setFormValue(event: any) {
+    this.countryFilterData.searchValue = event.name;
+    this.countryFilterData.key = event.searchField;
   }
 }

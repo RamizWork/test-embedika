@@ -1,0 +1,46 @@
+.container {
+  width: 393px;
+  .title {
+    padding-top: 52px;
+    padding-left: 33px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 25px;
+  }
+  .form_filter {
+    padding-top: 52px;
+    padding-left: 33px;
+    .filter__input {
+      width: 329px;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      &:hover, &:focus {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      }
+    }
+    .radio__button_wrapper {
+      .radio__button{
+        margin-bottom: 20px;
+        .radio__button_label{
+          margin-left: 28px;
+        }
+      }
+      .title__radio_button {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        margin: 25px 0;
+
+      }
+    }
+  }
+}

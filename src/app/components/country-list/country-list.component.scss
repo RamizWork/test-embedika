@@ -1,61 +1,78 @@
-.container {
-  margin: 0;
+.wrapper {
+  display: flex;
 
-  .country__info {
+  .right {
+    width: 393px;
+    min-height: 100%;
+    background-color: #FFFFFF;
+  }
 
-    .header {
-      padding-left: 63px;
-      padding-top: 52px;
-      padding-bottom: 64px;
+  .left {
+    flex: 1 1 auto;
+  }
 
+  .container {
+    margin: 0;
+    display: flex;
+
+    .country__info {
+      flex: 1 1 auto;
+
+      .header {
+        padding-left: 63px;
+        padding-top: 52px;
+        padding-bottom: 64px;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+
+  }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    margin: 62px 0 168px 72px;
+
+    .current__page {
+      margin: 0 27px;
+      height: 28px;
+      width: 10px;
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 500;
-      font-size: 28px;
+      font-size: 16px;
       line-height: 32px;
+      color: #000000;
+    }
+
+    .arrow__left {
+      cursor: pointer;
+      height: 12px;
+      width: 7px;
+      background: url("./../../../assets/arrow_left.svg");
+
+      &:active {
+        background: #347CFF;
+      }
+    }
+
+    .arrow__right {
+      cursor: pointer;
+      height: 12px;
+      width: 7px;
+      background: url("./../../../assets/arrow_left.svg");
+      transform: scaleX(-1);
+
+      &:active {
+        background: #347CFF;
+      }
     }
   }
+
 
 }
-
-.pagination {
-  display: flex;
-  align-items: center;
-  margin: 62px 0 168px 72px;
-
-  .current__page {
-    margin: 0 27px;
-    height: 28px;
-    width: 10px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 32px;
-    color: #000000;
-  }
-
-  .arrow__left {
-    cursor: pointer;
-    height: 12px;
-    width: 7px;
-    background: url("./../../../assets/arrow_left.svg");
-    &:active{
-      background: #347CFF;
-    }
-  }
-
-  .arrow__right {
-    cursor: pointer;
-    height: 12px;
-    width: 7px;
-    background: url("./../../../assets/arrow_left.svg");
-    transform: scaleX(-1);
-    &:active{
-      background: #347CFF;
-    }
-  }
-}
-
-
-
