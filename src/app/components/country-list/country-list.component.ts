@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CountriesService} from "../../services/countries.service";
 import {Observable} from "rxjs";
 import {CountryInterface} from "../../interfaces/country.interface";
+import {DataCountriesInterface} from "../../interfaces/dataCountries.interface";
 
 @Component({
   selector: 'app-country-list',
@@ -9,12 +10,21 @@ import {CountryInterface} from "../../interfaces/country.interface";
   styleUrls: ['./country-list.component.scss']
 })
 export class CountryListComponent implements OnInit {
-  countryData$: Observable<CountryInterface[]> | undefined;
+  loadCountriesFromApi$: Observable<CountryInterface[]> | undefined;
+  countriesData$: Observable<DataCountriesInterface> | undefined;
 
   constructor(private countryService: CountriesService) { }
 
   ngOnInit(): void {
-    this.countryData$ = this.countryService.getCountries();
+    this.loadCountriesFromApi$ = this.countryService.loadCountriesFromApi();
+    this.countriesData$ = this.countryService.getCountriesData();
   }
 
+  previousPage() {
+    this.countryService.previousPage()
+  }
+
+  nextPage() {
+    this.countryService.nextPage();
+  }
 }

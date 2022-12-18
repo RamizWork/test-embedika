@@ -1,8 +1,14 @@
-<div class="container">
-  <div class="country__info">
-    <div class="header">List of country</div>
-    <ng-container *ngIf="countryData$ | async as countryDataList">
-      <app-country-preview *ngFor="let country of countryDataList" [country]="country"></app-country-preview>
-    </ng-container>
+<ng-container *ngIf="countriesData$ | async as countriesData">
+  <div class="container">
+    <div class="country__info">
+      <div class="header">List of country</div>
+      <app-country-preview *ngFor="let country of countriesData.countries" [country]="country"></app-country-preview>
+    </div>
   </div>
-</div>
+  <div class="pagination">
+    <div *ngIf="countriesData.pagination.current_page !== 1" class="arrow__left" (click)="previousPage()"></div>
+    <div class="current__page">{{countriesData.pagination.current_page}}</div>
+    <div *ngIf="countriesData.pagination.current_page !== countriesData.pagination.total_pages" class="arrow__right" (click)="nextPage()"></div>
+  </div>
+</ng-container>
+<ng-container *ngIf="loadCountriesFromApi$ | async"></ng-container>

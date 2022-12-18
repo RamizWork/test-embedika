@@ -1,5 +1,6 @@
 .container {
   margin: 0;
+
   .country__info {
 
     .header {
@@ -15,6 +16,45 @@
     }
   }
 
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin: 62px 0 168px 72px;
+
+  .current__page {
+    margin: 0 27px;
+    height: 28px;
+    width: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+  }
+
+  .arrow__left {
+    cursor: pointer;
+    height: 12px;
+    width: 7px;
+    background: url("./../../../assets/arrow_left.svg");
+    &:active{
+      background: #347CFF;
+    }
+  }
+
+  .arrow__right {
+    cursor: pointer;
+    height: 12px;
+    width: 7px;
+    background: url("./../../../assets/arrow_left.svg");
+    transform: scaleX(-1);
+    &:active{
+      background: #347CFF;
+    }
+  }
 }
 
 
