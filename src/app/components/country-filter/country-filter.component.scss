@@ -1,5 +1,7 @@
 .container {
   width: 393px;
+  min-height: 100vh;
+
   .title {
     padding-top: 52px;
     padding-left: 33px;
@@ -11,26 +13,55 @@
     color: rgba(0, 0, 0, 0.87);
     margin-bottom: 25px;
   }
+
   .form_filter {
+
     padding-top: 52px;
     padding-left: 33px;
+
     .filter__input {
       width: 329px;
+      height: 40px;
       border: none;
       border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: rgba(0, 0, 0, 0.4);
+
+      &::placeholder {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.4);
+      }
+
       &:hover, &:focus {
         border: none;
         outline: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
       }
     }
+
     .radio__button_wrapper {
-      .radio__button{
+      .radio__button {
         margin-bottom: 20px;
-        .radio__button_label{
+
+        .radio__button_label {
           margin-left: 28px;
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          color: rgba(0, 0, 0, 0.87);
         }
       }
+
       .title__radio_button {
         font-family: 'Roboto';
         font-style: normal;
