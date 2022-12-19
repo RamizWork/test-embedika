@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+
 import {CountryInterface} from "../../interfaces/country.interface";
 
 @Component({
@@ -9,7 +10,8 @@ import {CountryInterface} from "../../interfaces/country.interface";
 export class CountryPreviewComponent implements OnInit {
   @Input() country: CountryInterface | undefined;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

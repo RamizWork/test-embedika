@@ -1,8 +1,10 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {CountryKeysEnum} from "../../enum/country-keys.enum";
 import {Observable} from "rxjs";
 import {debounceTime, tap} from "rxjs/operators";
+
+import {CountryKeysEnum} from "../../enum/country-keys.enum";
+
 
 @Component({
   selector: 'app-country-filter',
@@ -16,7 +18,8 @@ export class CountryFilterComponent implements OnInit {
   countryKeys = CountryKeysEnum;
   watcherForm$: Observable<any> | undefined;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.initialize();

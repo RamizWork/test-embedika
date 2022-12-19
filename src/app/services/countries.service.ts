@@ -2,6 +2,7 @@ import {Injectable} from "@angular/core";
 import {Apollo, gql} from "apollo-angular";
 import {map, tap} from "rxjs/operators";
 import {BehaviorSubject, Observable, of} from "rxjs";
+
 import {CountryInterface} from "../interfaces/country.interface";
 import {CountryKeysEnum} from "../enum/country-keys.enum";
 import {DataCountriesInterface} from "../interfaces/dataCountries.interface";
@@ -99,7 +100,7 @@ export class CountriesService {
       const dataSource = this.dataSource$.getValue();
       const lastCurrentIndexDataSource = dataSource.indexOf(lastCurrentCountry);
       const countries = dataSource.slice(lastCurrentIndexDataSource - 9, lastCurrentIndexDataSource - 4);
-      const newDataCountries: DataCountriesInterface ={
+      const newDataCountries: DataCountriesInterface = {
         countries,
         pagination: {
           current_page: dataCountries.pagination.current_page - 1,

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {CountriesService} from "../../services/countries.service";
 import {Observable} from "rxjs";
+
+import {CountriesService} from "../../services/countries.service";
 import {CountryInterface} from "../../interfaces/country.interface";
 import {DataCountriesInterface} from "../../interfaces/dataCountries.interface";
 
@@ -15,9 +16,10 @@ export class CountryListComponent implements OnInit {
   countryFilterData = {
     key: undefined,
     searchValue: ''
-  }
+  };
 
-  constructor(private countryService: CountriesService) { }
+  constructor(private countryService: CountriesService) {
+  }
 
   ngOnInit(): void {
     this.loadCountriesFromApi$ = this.countryService.loadCountriesFromApi();
@@ -25,7 +27,7 @@ export class CountryListComponent implements OnInit {
   }
 
   previousPage() {
-    this.countryService.previousPage()
+    this.countryService.previousPage();
   }
 
   nextPage() {
